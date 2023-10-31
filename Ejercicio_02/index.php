@@ -21,6 +21,8 @@ function operaciones($numero1, $numero2, $operacionSel)
             return  $numero1 * $numero2;
         case "Division":
             return  $numero1 / $numero2;
+        default:
+            return "Ha habido un error inesperado";
     }
 }
 

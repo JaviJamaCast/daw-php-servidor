@@ -1,0 +1,144 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de volver atrás */
+#back-button {
+    margin-top: 10px;
+}
+
+.product h2 {
+    width: 30%;
+    font-size: 1.3em;
+    margin: 0;
+    color: #333;
+}
+
+.product p {
+    width: 20%;
+    font-size: 1em;
+    color: #666;
+}
+
+.product input {
+    width: 20%;
+    text-align: center;
+}
+
+.product button {
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+/* Carrito de compra */
+#cart {
+    list-style: none;
+    padding: 0;
+}
+
+h2,
+h3 {
+    margin: 1em;
+}
+
+.product button {
+    max-width: 10em;
+}
+
+#cart li {
+    border: 1px solid #ddd;
+    margin: 5px;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    max-width: 10em;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em;
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    max-width: 10em;
+    display: block;
+    text-align: center;
+    margin: 1em;
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover,
+a:hover {
+    cursor: pointer;
+    background-color: #555;
+}

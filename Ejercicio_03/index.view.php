@@ -12,7 +12,7 @@
     <?php
     if ($numero != null) {
         echo implode(", ", $numeros);
-        echo  "<p> El numero " . $numero . " aparece  " . $cont . " en el array </p>";
+        echo  "<p> El numero " . $numero . " aparece  " . $cont . " vez/veces en el array </p>";
     }
     ?>
 
