@@ -1,0 +1,15 @@
+.formBorrarId {
+    display: inline;
+}
+
+.formBorrarId input {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: blue;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    text-decoration: underline;
+}

@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container-index {
+    max-width: 96%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+}
+
+/* Estilo para el contenedor principal (container) */
+.container {
+    max-width: 80%;
+    /* Ajusta el ancho del contenedor principal */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.head-h1 {
+    color: #fff;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 48%;
+    /* Ajusta el ancho de la tabla para que quepa junto al formulario */
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+.formPost {
+    display: inline-block;
+}
+
+.add-form {
+    width: 48%;
+    /* Ajusta el ancho del formulario para que quepa junto a la tabla */
+    padding: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para el header */
+header {
+    margin: 1em;
+    border-radius: 1em;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: 1em;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    padding: .1em;
+
+    /* Cambiado a 100% para que ocupe todo el ancho */
+}
+
+li {
+    padding: 1em 0;
+    /* Espacio interno en los elementos de la lista */
+    border-bottom: 1px solid #ccc;
+    /* Línea divisoria entre elementos */
+    font-size: 16px;
+    /* Tamaño de fuente */
+}
+
+/* Agrega más estilos específicos para el header según tus necesidades */

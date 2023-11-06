@@ -1,58 +1,43 @@
 <?php
+require("funciones.php");
 $host = "127.0.0.1";
 $dbname = "ejerciciosdb";
 $user = "root";
 $pass = "102813";
 
-function connect($host, $dbname, $user, $pass)
+
+
+
+function realizarAccion($accion, $dbh)
 {
-    try {
-        # MySQL
-        $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-        return $dbh;
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+    switch ($accion) {
+        case "insert":
+            if (isset($_POST["nProducto"])) {
+                $nProducto = $_POST["nProducto"];
+                insertCompra($dbh, $nProducto);
+                header("Location: index.php");
+                exit;
+            }
+            break;
+        case "eliminarP":
+            if (isset($_POST["id"])) {
+                $id = $_POST["id"];
+                eliminarId($dbh, $id);
+                header("Location: index.php");
+                exit;
+            }
+            break;
+        case "vaciar":
+            eliminar($dbh);
+            header("Location: index.php");
+            exit;
     }
-}
-
-function getCompraId($dbh)
-{
-    $data = array('edad' => 33);
-    $stmt = $dbh->prepare("SELECT nombre, apellidos, email, edad FROM alumnos WHERE edad > :edad");
-    $stmt->execute($data);
-    while ($row = $stmt->fetch()) {
-        echo $row['nombre'] . "\n";
-        echo $row['apellidos'] . "\n";
-        echo $row['email'] . "\n";
-        echo $row['edad'] . "\n";
-    }
-    close();
-}
-
-// Get compra devuelve desde la bd una lista con los datos
-function getCompra($dbh)
-{
-    $stmt = $dbh->prepare("SELECT nombre_producto FROM lista_compra");
-    $stmt->execute();
-    return $listaCompra = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-   
-}
-
-function insertCompra($dbh)
-{
-    $data = array('nombre' => "Lulu", 'apellidos' => "Castaño", 'email' => "lulu@gmail.com", 'edad' => 33);
-    $stmt = $dbh->prepare("INSERT INTO alumnos(nombre, apellidos,email,edad) values (:nombre, :apellidos, :email, :edad)");
-    $stmt->execute($data);
-    close();
-}
-function close()
-{
-    $dbh = null;
 }
 //Llamado de las funciones
 $dbh = connect($host, $dbname, $user, $pass);
 
 $lista = getCompra($dbh);
-
+if (isset($_POST["accion"])) {
+    realizarAccion($_POST["accion"], $dbh);
+}
 require "index.view.php";

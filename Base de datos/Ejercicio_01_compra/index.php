@@ -44,7 +44,7 @@ function insertCompra($dbh, $nombre)
     $stmt->execute($data);
   
 }
-//Recuerda hacer el switch de las acciones
+
 function close()
 {
     $dbh = null;
